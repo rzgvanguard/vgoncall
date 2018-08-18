@@ -1,0 +1,55 @@
+import { Injectable } from '@angular/core';
+
+import { CrewListData } from '../entities/CrewListData';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CrewApiService {
+
+  constructor() { }
+
+  test(): Array<CrewListData> {
+    const crewArray = new Array<CrewListData>();
+    const c1 = new CrewListData();
+    c1.FirstName = 'hey';
+    c1.LastName = 'hi';
+    c1.ManagerName = 'Michael Cavallo';
+    c1.PhoneNumber = '6096096060';
+    c1.OnCallEndDate = 'Jan 8 2018';
+    c1.OnCallStartDate = 'Jan 1 2018';
+
+    const c2 = new CrewListData();
+
+    c2.FirstName = 'Alex';
+    c2.LastName = 'JOnes';
+    c2.ManagerName = 'Michael Cavallo';
+    c2.PhoneNumber = '6096096060';
+    c2.OnCallEndDate = 'Jan 8 2018';
+    c2.OnCallStartDate = 'Jan 1 2018';
+
+    const c3 = new CrewListData();
+
+
+    c3.FirstName = 'Jack';
+    c3.LastName = 'Son';
+    c3.ManagerName = 'Michael Cavallo';
+    c3.PhoneNumber = '6096096060';
+    c3.OnCallEndDate = 'Jan 8 2018';
+    c3.OnCallStartDate = 'Jan 1 2018';
+
+    const c4 = new CrewListData();
+
+
+    c4.FirstName = 'Lauren';
+    c4.LastName = 'Haggle';
+    c4.ManagerName = 'Michael Cavallo';
+    c4.PhoneNumber = '6096096060';
+    c4.OnCallEndDate = 'Jan 8 2018';
+    c4.OnCallStartDate = 'Jan 1 2018';
+
+    crewArray.concat(c1, c2, c3, c4);
+
+    return crewArray;
+  }
+}
