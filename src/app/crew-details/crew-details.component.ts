@@ -15,7 +15,7 @@ export class CrewDetailsComponent implements OnInit {
   constructor(private crewService: CrewApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.crew = this.crewService.testSingle('');
+    this.crew = this.crewService.testSingle(this.route.snapshot.params['id']);
     console.log(this.crew);
   }
 

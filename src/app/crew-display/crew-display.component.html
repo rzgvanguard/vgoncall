@@ -9,5 +9,7 @@
         <br>
         Phone Number: {{crew.PhoneNumber}}
     </p>
-    <button class="btn btn-primary" (click)="viewCrewProfile()">View Schedule</button>  
+    <div [routerLink]="['/CrewList', crew.CrewId]">
+        <button class="btn btn-primary" (click)="viewCrewProfile()">View Profile</button>  
+    </div>
   </div>

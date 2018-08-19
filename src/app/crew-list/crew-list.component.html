@@ -4,10 +4,8 @@
   </h3>
   <hr>
   <div class="row">
-      <div class="col-md-6">
           <app-crew-display (buttonClick) = "redirectToCrewProfile($event)" 
           *ngFor="let crew of crewMembers" [crew]="crew">
         </app-crew-display>
-      </div>
   </div>
 </div>
