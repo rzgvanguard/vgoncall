@@ -16,7 +16,6 @@ export class CrewDisplayComponent implements OnInit {
   constructor(private crewService: CrewApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.crew = this.crewService.testSingle('');
 
   }
 
