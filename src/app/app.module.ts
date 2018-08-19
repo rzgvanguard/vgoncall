@@ -13,6 +13,7 @@ import { CrewChangeRequestComponent } from './crew-change-request/crew-change-re
 import { CrewApiService } from './services/crew-api.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
+import { CrewDetailsComponent } from './crew-details/crew-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     ViewCrewCalendarComponent,
     ViewManagerCrewComponent,
     WeeklyCalendarComponent,
-    CrewChangeRequestComponent
+    CrewChangeRequestComponent,
+    CrewDetailsComponent
   ],
   imports: [
     BrowserModule,

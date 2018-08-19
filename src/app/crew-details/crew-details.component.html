@@ -1,0 +1,52 @@
+<div class="well hoverwell thumbnail">
+  <h2>
+    {{crew.FirstName}} {{crew.LastName}}
+  </h2>  
+  <p>
+    This will be a picture of the crew memeber
+  </p>
+  <hr>
+
+  <div class="row">
+      <div class="col-md-4">
+          <b> Manager Name:</b> 
+          <br>
+          <a> {{crew.ManagerName}} </a>
+      </div>
+    
+      <div class="col-md-4">
+          Crew Cell Number: {{crew.PhoneNumber}}
+          <br>
+          Crew On-Call Number: {{crew.PhoneNumber}}
+      </div>
+
+      <div class="col-md-4">
+          On Call Start Date: {{crew.OnCallStartDate}}
+          <br>
+          On Call End Date: {{crew.OnCallEndDate}}
+      </div>
+  </div>
+
+  <div class="row pad-top">
+    <p> 
+      this will contain any other relevant information about the crew member
+    </p>
+  </div>
+  <div class="row pad-top">
+    <div class="col-md-3">
+        <button class="btn btn-primary" (click)="viewCrewProfile()">View Schedule</button>  
+    </div>
+
+    <div class="col-md-3">
+        <button class="btn btn-primary">Change Requests</button>  
+    </div>
+
+    <div class="col-md-3">
+        <button class="btn btn-primary">Edit Profile Info</button>  
+    </div>
+
+    <div class="col-md-3">
+        <button class="btn btn-danger">Remove Crew</button>  
+    </div>
+  </div>
+</div>

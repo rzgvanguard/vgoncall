@@ -3,31 +3,11 @@
     This Crew members next on call date and information:
   </h3>
   <hr>
-  <app-crew-display (buttonClick) = "redirectToCrewProfile($event)" 
-    *ngFor="let crew of crewMembers" [crew]="crew"></app-crew-display>
-</div>
-
-<!-- <div>
-    <h3>
-      This Crew members next on call date and information:
-    </h3>
-  
-    <hr>
-    <div class="well hoverwell thumbnail">
-      <hr>
-      <h2>
-          [crewData.FirstName] [crewData.LastName]
-      </h2>
-      <h6>Relevant Information:</h6>
-      <p>
-          Manager Name: [crewData.ManagerName]
-          <br>
-          Phone Number: [crewData.PhoneNumber]
-          <br>
-          On Call Start Date: [crewData.OnCallStartDate]
-          <br>
-          On Call End Date: [crewData.OnCallEndDate]
-      </p>  
-    </div>
+  <div class="row">
+      <div class="col-md-6">
+          <app-crew-display (buttonClick) = "redirectToCrewProfile($event)" 
+          *ngFor="let crew of crewMembers" [crew]="crew">
+        </app-crew-display>
+      </div>
   </div>
-   -->
+</div>
