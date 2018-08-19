@@ -14,8 +14,13 @@ import { CrewApiService } from './services/crew-api.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CrewDetailsComponent } from './crew-details/crew-details.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
+=======
+import { Error404Component } from './errors/404/404.component';
+import { CrewRouteActivatorService } from './services/crew-route-activator.service';
+>>>>>>> 0cca9bdcde38248b6f28c0d5df5e7e9f94f68824
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { CalendarModule } from 'angular-calendar';
     ViewManagerCrewComponent,
     WeeklyCalendarComponent,
     CrewChangeRequestComponent,
-    CrewDetailsComponent
+    CrewDetailsComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,7 @@ import { CalendarModule } from 'angular-calendar';
     BrowserAnimationsModule, CalendarModule.forRoot()
     
   ],
-  providers: [CrewApiService],
+  providers: [CrewApiService, CrewRouteActivatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
