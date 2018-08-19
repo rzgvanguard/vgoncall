@@ -14,6 +14,8 @@ import { CrewApiService } from './services/crew-api.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CrewDetailsComponent } from './crew-details/crew-details.component';
+import { Error404Component } from './errors/404/404.component';
+import { CrewRouteActivatorService } from './services/crew-route-activator.service';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,14 @@ import { CrewDetailsComponent } from './crew-details/crew-details.component';
     ViewManagerCrewComponent,
     WeeklyCalendarComponent,
     CrewChangeRequestComponent,
-    CrewDetailsComponent
+    CrewDetailsComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [CrewApiService],
+  providers: [CrewApiService, CrewRouteActivatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
