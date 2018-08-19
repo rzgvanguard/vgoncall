@@ -14,6 +14,8 @@ import { CrewApiService } from './services/crew-api.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CrewDetailsComponent } from './crew-details/crew-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CrewDetailsComponent } from './crew-details/crew-details.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule, CalendarModule.forRoot()
+    
   ],
   providers: [CrewApiService],
   bootstrap: [AppComponent]
