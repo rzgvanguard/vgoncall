@@ -9,25 +9,33 @@ import { CrewListData } from '../entities/CrewListData';
 })
 export class CrewListComponent implements OnInit {
 
-  private crewData: CrewListData[];
+  private crewMembers: CrewListData[];
+  // private crew: CrewListData;
   constructor(private apiService: CrewApiService) {
-    
-    this.crewData = new Array<CrewListData>();
+
+    this.crewMembers = new Array<CrewListData>();
 
   }
 
   ngOnInit() {
-    this.crewData = this.apiService.test();
+    this.crewMembers = this.apiService.test();
+    // console.log(this.crewMembers);
+    // this.crew = new CrewListData();
 
-    // const crewData = new CrewListData();
-    // crewData.FirstName = 'first';
-    // crewData.LastName = 'last';
-    // crewData.ManagerName = 'Michael Cavallo';
-    // crewData.PhoneNumber = '6096096060';
-    // crewData.OnCallEndDate = 'Jan 8 2018';
-    // crewData.OnCallStartDate = 'Jan 1 2018';
+    // // const crewData = new CrewListData();
+    // this.crew.CrewId = '1234';
+    // this.crew.FirstName = 'first';
+    // this.crew.LastName = 'last';
+    // this.crew.ManagerName = 'Michael Cavallo';
+    // this.crew.PhoneNumber = '6096096060';
+    // this.crew.OnCallEndDate = 'Jan 8 2018';
+    // this.crew.OnCallStartDate = 'Jan 1 2018';
 
-    // console.log(crewData);
+    // // console.log(crewData);
+  }
+
+  redirectToCrewProfile(data) {
+    // console.log(data);
   }
 
 }
