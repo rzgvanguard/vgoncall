@@ -4,12 +4,12 @@ import { CrewListData } from '../entities/CrewListData';
 import { CalendarEventImpl } from '../entities/CalendarEventImpl';
 
 @Component({
-  selector: 'app-weekly-calendar',
+  selector: 'app-monthly-calendar',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './weekly-calendar.component.html',
-  styleUrls: ['./weekly-calendar.component.css']
+  templateUrl: './monthly-calendar.component.html',
+  styleUrls: ['./monthly-calendar.component.css']
 })
-export class WeeklyCalendarComponent implements OnInit {
+export class MonthlyCalendarComponent implements OnInit {
   private crewMembers: CrewListData[];
   viewDate: Date = new Date();
   events = [];
@@ -18,7 +18,6 @@ export class WeeklyCalendarComponent implements OnInit {
   ngOnInit() {
     const employees = this.getOnCallEmployees();
     this.loadEmployeesOnCalendar(employees);
-
   }
 
   loadEmployeesOnCalendar(employeesOnCall: CrewListData[]) {

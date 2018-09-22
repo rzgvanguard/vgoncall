@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CrewListComponent } from './crew-list/crew-list.component';
@@ -14,13 +15,13 @@ import { CrewApiService } from './services/crew-api.service';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CrewDetailsComponent } from './crew-details/crew-details.component';
-<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
-=======
 import { Error404Component } from './errors/404/404.component';
 import { CrewRouteActivatorService } from './services/crew-route-activator.service';
->>>>>>> 0cca9bdcde38248b6f28c0d5df5e7e9f94f68824
+import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
+import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,17 @@ import { CrewRouteActivatorService } from './services/crew-route-activator.servi
     CrewChangeRequestComponent,
     CrewDetailsComponent,
     Error404Component,
+    LoginComponent,
+    MonthlyCalendarComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule, CalendarModule.forRoot()
-    
+    BrowserAnimationsModule,
+    CommonModule,
+    CalendarModule.forRoot(),
+    FormsModule,
+
   ],
   providers: [CrewApiService, CrewRouteActivatorService],
   bootstrap: [AppComponent]
