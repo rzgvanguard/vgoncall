@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CrewApiService } from '../services/crew-api.service';
 import { CrewListData } from '../entities/CrewListData';
-import { CalendarEventImpl } from '../entities/CalendarEventImpl';
 
 @Component({
   selector: 'app-weekly-calendar',
