@@ -25,6 +25,8 @@ export class MonthlyCalendarComponent implements OnInit {
   }
 
   getDate(date: Date) {
+    // send to service to get all the info for the date, then pass that into a specific date
+    // component - do this with dummy data first.
     console.log(date);
   }
 
