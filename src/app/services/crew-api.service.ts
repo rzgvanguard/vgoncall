@@ -58,6 +58,10 @@ export class CrewApiService {
     return crewArray;
   }
 
+  getCrewOnCallForDate() {
+
+  }
+
   testSingle(id: String): CrewListData {
     // console.log('api being called with: ' + id);
     const c4 = new CrewListData();

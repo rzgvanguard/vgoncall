@@ -17,6 +17,7 @@ export const appRoutes: Routes = [
     { path: 'WeeklyCalendar', component: WeeklyCalendarComponent },
     { path: 'MonthlyCalendar', component: MonthlyCalendarComponent },
     { path: 'DayView', component: DayViewComponent },
-    { path: '404', component: Error404Component },
     { path: '', redirectTo: '/CrewList', pathMatch: 'full' },
+    { path: '**', component: Error404Component },
+
 ];
