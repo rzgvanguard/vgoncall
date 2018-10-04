@@ -12,6 +12,7 @@ import { CalendarEventImpl } from '../entities/CalendarEventImpl';
 export class MonthlyCalendarComponent implements OnInit {
   private crewMembers: CrewListData[];
   viewDate: Date = new Date();
+  clickedDate: Date;
   events = [];
   constructor(private apiService: CrewApiService) { }
 
@@ -21,6 +22,10 @@ export class MonthlyCalendarComponent implements OnInit {
   }
 
   loadEmployeesOnCalendar(employeesOnCall: CrewListData[]) {
+  }
+
+  getDate(date: Date) {
+    console.log(date);
   }
 
   getOnCallEmployees(): Array<CrewListData> {
