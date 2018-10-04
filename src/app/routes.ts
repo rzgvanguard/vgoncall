@@ -7,6 +7,7 @@ import { Error404Component } from './errors/404/404.component';
 import { CrewRouteActivatorService } from './services/crew-route-activator.service';
 import { LoginComponent } from './login/login.component';
 import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.component';
+import { DayViewComponent } from './day-view/day-view.component';
 
 export const appRoutes: Routes = [
     { path: 'CrewList', component: CrewListComponent },
@@ -15,6 +16,7 @@ export const appRoutes: Routes = [
     { path: 'CrewList/:id', component: CrewDetailsComponent, canActivate: [CrewRouteActivatorService] },
     { path: 'WeeklyCalendar', component: WeeklyCalendarComponent },
     { path: 'MonthlyCalendar', component: MonthlyCalendarComponent },
+    { path: 'DayView', component: DayViewComponent },
     { path: '404', component: Error404Component },
     { path: '', redirectTo: '/CrewList', pathMatch: 'full' },
 ];

@@ -22,6 +22,7 @@ import { CrewRouteActivatorService } from './services/crew-route-activator.servi
 import { LoginComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.component';
+import { DayViewComponent } from './day-view/day-view.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.co
     Error404Component,
     LoginComponent,
     MonthlyCalendarComponent,
+    DayViewComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+.changeColor {
+    background-color: lightgray;
+    text-decoration-color: black;
+    color: black;
+}
+
+.cal-cell-top ng-star-inserted {
+    background-color: white;
+}
