@@ -2,6 +2,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CrewApiService } from '../services/crew-api.service';
 import { CrewListData } from '../entities/CrewListData';
 import { CalendarEventImpl } from '../entities/CalendarEventImpl';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-monthly-calendar',
@@ -14,7 +16,7 @@ export class MonthlyCalendarComponent implements OnInit {
   viewDate: Date = new Date();
   clickedDate: Date;
   events = [];
-  constructor(private apiService: CrewApiService) { }
+  constructor(private apiService: CrewApiService, private router: Router) { }
 
   ngOnInit() {
     const employees = this.getOnCallEmployees();
@@ -24,9 +26,13 @@ export class MonthlyCalendarComponent implements OnInit {
   loadEmployeesOnCalendar(employeesOnCall: CrewListData[]) {
   }
 
-  getDate(date: Date) {
+  getDayViewForDate(date: Date) {
     // send to service to get all the info for the date, then pass that into a specific date
     // component - do this with dummy data first.
+    this.apiService.test();
+    const dateString = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
+    this.router.navigate(['/DayView'], { queryParams: { date: date } });
+
     console.log(date);
   }
 

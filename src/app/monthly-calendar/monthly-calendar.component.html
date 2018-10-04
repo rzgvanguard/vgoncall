@@ -13,7 +13,7 @@
           [viewDate]="viewDate"
           [events]="events"
           (dayClicked)="clickedDate = $event.day.date"
-          (dayClicked) = "getDate($event.day.date)">
+          (dayClicked) = "getDayViewForDate($event.day.date)">
         </mwl-calendar-month-view>
       </div>
   </div>
