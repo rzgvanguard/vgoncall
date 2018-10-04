@@ -63,6 +63,7 @@ export class CrewApiService {
   }
 
   testSingle(id: String): CrewListData {
+    // this needs to eventually return the correct data not stale / static data
     // console.log('api being called with: ' + id);
     const c4 = new CrewListData();
 
