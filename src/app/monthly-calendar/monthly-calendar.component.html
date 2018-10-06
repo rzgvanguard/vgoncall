@@ -7,7 +7,46 @@
         Click on a day on the view.
         <strong *ngIf="clickedDate">You clicked on this day: {{ clickedDate | date:'medium' }}</strong>
       </div>
-  
+  <div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="btn-group">
+          <div
+            class="btn btn-primary"
+            mwlCalendarPreviousView
+            [view]="myView"
+            [(viewDate)]="viewDate"
+            (click)="updateDate()"
+            (viewDateChange)="activeDayIsOpen = false">
+            Previous
+          </div>
+          <div
+            class="btn btn-secondary"
+            mwlCalendarToday
+            (click)="updateDate()"
+            [(viewDate)]="viewDate">
+            Today
+          </div>
+          <div
+            class="btn btn-primary"
+            mwlCalendarNextView
+            [view]="myView"
+            [(viewDate)]="viewDate"
+            (click)="updateDate()"
+            (viewDateChange)="activeDayIsOpen = false">
+            Next
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>{{monthName}}</h3>
+      </div>
+    </div>
+  </div>
+     
+        <br>
+        <br>
+
     <div class="changeColor">
         <mwl-calendar-month-view
           [viewDate]="viewDate"
