@@ -21,6 +21,6 @@ export class CrewDisplayComponent implements OnInit {
 
   viewCrewProfile() {
     this.buttonClick.emit(this.crew.CrewId);
-    console.log('crew id ' + this.route.snapshot.params['id']);
+    // console.log('crew id ' + this.route.snapshot.params['id']);
   }
 }

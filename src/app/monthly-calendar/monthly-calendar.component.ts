@@ -3,6 +3,7 @@ import { CrewApiService } from '../services/crew-api.service';
 import { CrewListData } from '../entities/CrewListData';
 // import { CalendarEventImpl } from '../entities/CalendarEventImpl';
 import { Router } from '@angular/router';
+import { DateHelper } from '../helper/DateHelper';
 
 @Component({
   selector: 'app-monthly-calendar',
@@ -13,9 +14,15 @@ import { Router } from '@angular/router';
 export class MonthlyCalendarComponent implements OnInit {
   private crewMembers: CrewListData[];
   viewDate: Date = new Date();
+  selectedMonth: Number = this.viewDate.getMonth() + 1;
+  monthName: String;
+  dateHelper: DateHelper = new DateHelper();
+  myView: String = 'month';
   clickedDate: Date;
   events = [];
-  constructor(private apiService: CrewApiService, private router: Router) { }
+  constructor(private apiService: CrewApiService, private router: Router) {
+  this.monthName  = this.dateHelper.convertMonthToString(this.selectedMonth);
+  }
 
   ngOnInit() {
     const employees = this.getOnCallEmployees();
@@ -33,6 +40,11 @@ export class MonthlyCalendarComponent implements OnInit {
     this.router.navigate(['/DayView'], { queryParams: { date: date } });
 
     console.log(date);
+  }
+
+  updateDate() {
+    this.selectedMonth = this.viewDate.getMonth() + 1;
+    this.monthName = this.dateHelper.convertMonthToString(this.selectedMonth);
   }
 
   getOnCallEmployees(): Array<CrewListData> {
