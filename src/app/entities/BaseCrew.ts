@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-//
-=======
 export class BaseCrew {
     CrewId: String;
     CrewEmail: String;
@@ -10,4 +7,3 @@ export class BaseCrew {
     LastName: String;
     OnCallDays: Array<Number>;
 }
->>>>>>> 01f60372783d0fba1c460c69f7a135589357aefe
