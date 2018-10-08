@@ -2,12 +2,36 @@ import { Injectable } from '@angular/core';
 // import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { CrewListData } from '../entities/CrewListData';
+import { CrewData } from '../entities/CrewData';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrewApiService {
+  private tempCrewData: Array<CrewData>;
   constructor() { }
+
+  generateTempCrewData(): Array<CrewData> {
+    this.tempCrewData = new Array<CrewData>();
+
+    const c1 = new CrewData();
+
+    c1.CrewId = '12345';
+
+    const c2 = new CrewData();
+    c2.CrewId = '23456';
+
+    const c3 = new CrewData();
+    c3.CrewId = '34567';
+
+    const c4 = new CrewData();
+    c4.CrewId = '45678';
+
+    this.tempCrewData.push(c1, c2, c3, c4);
+
+    return this.tempCrewData;
+  }
+
 // private http: HttpClient
   test(): Array<CrewListData> {
     console.log('api is being called');
@@ -58,6 +82,10 @@ export class CrewApiService {
     crewArray.find(c => c.CrewId === 'something');
 
     return crewArray;
+  }
+
+  getCrewByManager(id: String): Array<CrewData> {
+    return this.generateTempCrewData();
   }
 
   getCrewOnCallForDate() {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CrewApiService } from '../services/crew-api.service';
+import { CrewData } from '../entities/CrewData';
 
 @Component({
   selector: 'app-manager-screen',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerScreenComponent implements OnInit {
 
-  constructor() { }
+  private crewTeam: Array<CrewData>;
+  constructor(private crewService: CrewApiService) { }
 
   ngOnInit() {
+    const managerId: String = 'test';
+    this.crewTeam = this.crewService.getCrewByManager(managerId);
   }
 
 }
