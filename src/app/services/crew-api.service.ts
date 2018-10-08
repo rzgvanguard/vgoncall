@@ -7,7 +7,6 @@ import { CrewListData } from '../entities/CrewListData';
   providedIn: 'root'
 })
 export class CrewApiService {
-
   constructor() { }
 // private http: HttpClient
   test(): Array<CrewListData> {
@@ -55,6 +54,9 @@ export class CrewApiService {
     crewArray.push(c1, c2, c3, c4);
 
     console.log(crewArray);
+
+    crewArray.find(c => c.CrewId === 'something');
+
     return crewArray;
   }
 
@@ -76,5 +78,13 @@ export class CrewApiService {
     c4.CrewId = '45678';
 
     return c4;
+  }
+
+
+  saveNewCrew(crewData: any): boolean {
+    // call the api to save the new crew member
+    return true;
+
+    // if the call is rejected - return false
   }
 }

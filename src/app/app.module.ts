@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CrewListComponent } from './crew-list/crew-list.component';
@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.component';
 import { DayViewComponent } from './day-view/day-view.component';
+import { ManagerScreenComponent } from './manager-screen/manager-screen.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { DayViewComponent } from './day-view/day-view.component';
     LoginComponent,
     MonthlyCalendarComponent,
     DayViewComponent,
+    ManagerScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { DayViewComponent } from './day-view/day-view.component';
     CommonModule,
     CalendarModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
 
   ],
   providers: [CrewApiService, CrewRouteActivatorService],
