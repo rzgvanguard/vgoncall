@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CrewApiService } from '../services/crew-api.service';
+import { CrewTransferData } from '../entities/CrewTransferData';
 
 @Component({
   selector: 'app-add-crew',
@@ -23,7 +24,6 @@ export class AddCrewComponent implements OnInit {
   constructor(private router: Router, private crewService: CrewApiService) { }
 
   ngOnInit() {
-
     this.crewId = new FormControl(null, Validators.required);
     this.crewEmail = new FormControl(null, Validators.required);
     this.crewPhoneNumber = new FormControl(null, Validators.required);
@@ -42,14 +42,22 @@ export class AddCrewComponent implements OnInit {
       lastName: this.lastName,
       crewPM: this.crewPM,
       crewManager: this.crewManager
-
     });
   }
 
   saveCrew(formValues) {
     if (this.crewForm.valid) {
-      console.log(formValues);
-      this.crewService.saveNewCrew(formValues);
+      let crewData = new CrewTransferData();
+        crewData.CrewId = formValues.crewId,
+        crewData.CrewEmail = formValues.crewEmail,
+        crewData.CrewPhoneNumber = formValues.crewPhoneNumber,
+        crewData.CrewExtension = formValues.crewExtension,
+        crewData.FirstName = formValues.firstName,
+        crewData.LastName = formValues.lastName,
+        crewData.CrewPMId = formValues.crewPM,
+        crewData.CrewManagerId = formValues.crewManager,
+
+      this.crewService.saveNewCrew(crewData);
       this.router.navigate(['/CrewList']);
     }
   }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CrewListComponent } from './crew-list/crew-list.component';
@@ -51,6 +52,7 @@ import { ManagerScreenComponent } from './manager-screen/manager-screen.componen
     CalendarModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
   ],
   providers: [CrewApiService, CrewRouteActivatorService],
