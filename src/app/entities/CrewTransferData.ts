@@ -1,11 +1,11 @@
 export class CrewTransferData {
-    CrewId: String;
-    CrewEmail: String;
-    CrewPhoneNumber: String;
-    CrewExtension: String;
-    FirstName: String;
-    LastName: String;
-    CrewPMId: String;
-    CrewManagerId: String;
-    OnCallDays: Number[];
+    crewId: String;
+    crewEmail: String;
+    crewPhoneNumber: String;
+    crewExtension: String;
+    firstName: String;
+    lastName: String;
+    crewPMId: String;
+    crewManagerId: String;
+    onCallDays: Number[];
 }

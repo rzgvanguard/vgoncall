@@ -48,14 +48,14 @@ export class AddCrewComponent implements OnInit {
   saveCrew(formValues) {
     if (this.crewForm.valid) {
       let crewData = new CrewTransferData();
-        crewData.CrewId = formValues.crewId,
-        crewData.CrewEmail = formValues.crewEmail,
-        crewData.CrewPhoneNumber = formValues.crewPhoneNumber,
-        crewData.CrewExtension = formValues.crewExtension,
-        crewData.FirstName = formValues.firstName,
-        crewData.LastName = formValues.lastName,
-        crewData.CrewPMId = formValues.crewPM,
-        crewData.CrewManagerId = formValues.crewManager,
+        crewData.crewId = formValues.crewId,
+        crewData.crewEmail = formValues.crewEmail,
+        crewData.crewPhoneNumber = formValues.crewPhoneNumber,
+        crewData.crewExtension = formValues.crewExtension,
+        crewData.firstName = formValues.firstName,
+        crewData.lastName = formValues.lastName,
+        crewData.crewPMId = formValues.crewPM,
+        crewData.crewManagerId = formValues.crewManager,
 
       this.crewService.saveNewCrew(crewData);
       this.router.navigate(['/CrewList']);

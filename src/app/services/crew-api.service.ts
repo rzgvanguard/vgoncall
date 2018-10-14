@@ -150,10 +150,10 @@ export class CrewApiService {
 
   getAllCrew(): Array<CrewData> {
     let url = this.restUrl.concat("CrewData");
-    let crewData: Array<CrewTransferData> = null;
-    this.httpClient.get<CrewTransferData[]>(url).subscribe((data: CrewTransferData[]) =>
-        // crewData = data
-        console.log(data)
+    let crewData: any = null;
+    this.httpClient.get(url).subscribe((data: any) => 
+        crewData = data
+        // console.log(data)
         );
     console.log(crewData);
       return null;
