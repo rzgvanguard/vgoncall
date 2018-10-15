@@ -1,11 +1,64 @@
 <div>
-  <p>
-    Select the week you would like to swap with
-  </p>
+  <form>
+      <div>
+          <div>
+              <p>
+                Please select the Crew Member you would like to swap:
+              </p>
+
+              <mat-form-field class="form-full-width">
+                  <input matInput placeholder="Crew" aria-label="Crew" [matAutocomplete]="auto" [formControl]="crewControl">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let crew of filteredCrew | async" [value]="crew.FirstName">
+                      <!-- <img class="example-option-img" aria-hidden [src]="state.flag" height="25"> -->
+                      <span>{{ crew.FirstName + ' ' + crew.LastName}}</span> |
+                      <small>CrewId: {{ crew.CrewId }}</small>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>              
+            </div>
+
+            <br>
+            <br>
+
+          <p>
+            Select the week you would like to swap:
+          </p>
+          <mat-form-field>
+            <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
+            <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #startPicker></mat-datepicker>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+              <input matInput [matDatepicker]="endPicker" placeholder="End Date">
+              <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #endPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div>
+          <label class="pull-left">Reason for Swap:</label>
+          <br>
+          <mat-form-field class="form-full-width">
+              <textarea matInput placeholder="Unavailable because..."></textarea>
+          </mat-form-field>
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div>
+            <p>
+                On submission, your teammates will be notified that this week is currently up for swap.
+            </p>
+          <button class="btn btn-primary">Submit</button>
+        </div>
+  </form>
 </div>
 
-<div>
-  <p>
-    Post that you are requesting a swap - your teammates will be notified
-  </p>
-</div>

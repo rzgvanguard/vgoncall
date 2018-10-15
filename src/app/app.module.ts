@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 import { AppComponent } from './app.component';
 import { CrewListComponent } from './crew-list/crew-list.component';
 import { NavComponent } from './nav/nav.component';
@@ -53,9 +59,18 @@ import { ManagerScreenComponent } from './manager-screen/manager-screen.componen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    // mat imports
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    
   ],
-  providers: [CrewApiService, CrewRouteActivatorService],
+  providers: [
+    CrewApiService, CrewRouteActivatorService,
+    MatDatepickerModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
