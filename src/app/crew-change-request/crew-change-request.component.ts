@@ -10,6 +10,10 @@ export class CrewChangeRequestComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // grab list of crew on your team
   }
 
+  selectCrewById() {
+
+  }
 }
