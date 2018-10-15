@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 // import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { CrewListData } from '../entities/CrewListData';
+import { BaseCrew } from '../entities/BaseCrew';
+import { BaseCrewNewFormat} from '../entities/BaseCrewNewFormat';
+import { CrewData } from '../entities/CrewData';
+import { CrewDataNewFormat } from '../entities/CrewDataNewFormat';
 
 @Injectable({
   providedIn: 'root'
@@ -77,4 +81,48 @@ export class CrewApiService {
 
     return c4;
   }
+
+  testBaseCrewList(): Array<CrewDataNewFormat> {
+    const crewDataNewFormatArray = new Array<CrewDataNewFormat>();
+    const c1 = new CrewDataNewFormat();
+    const c1ArrOnCallDays = new Array<String>();
+    c1ArrOnCallDays.push('10-10', '10-11', '10-12', '10-16', '10-17');
+    c1.OnCallDays = c1ArrOnCallDays;
+    c1.FirstName = 'Rohan';
+    c1.CrewManager.FirstName = 'Sunny';
+
+    const c2 = new CrewDataNewFormat();
+    const c2ArrOnCallDays = new Array<String>();
+    c2ArrOnCallDays.push('10-10', '10-11', '10-12', '10-13', '10-14', '10-15', '10-16', '10-17',  '10-19', '10-27');
+    c2.OnCallDays = c2ArrOnCallDays;
+    c2.FirstName = 'Krishna';
+    c2.CrewManager.FirstName = 'Sunny';
+
+
+    const c3 = new CrewDataNewFormat();
+    const c3ArrOnCallDays = new Array<String>();
+    c3ArrOnCallDays.push('10-10', '10-11', '10-16', '10-18', '10-21',  '10-20', '10-22');
+    c3.OnCallDays = c3ArrOnCallDays;
+    c3.FirstName = 'Jeff';
+    c3.CrewManager.FirstName = 'Sunny';
+
+    const c4 = new CrewDataNewFormat();
+    const c4ArrOnCallDays = new Array<String>();
+    c4ArrOnCallDays.push('10-10', '10-11', '10-12', '10-16', '10-17', '10-18', '10-23', '10-24' );
+    c4.OnCallDays = c4ArrOnCallDays;
+    c4.FirstName = 'Suzie';
+    c4.CrewManager.FirstName = 'Sarv';
+
+
+
+    crewDataNewFormatArray.push(c1, c2, c3, c4);
+    return crewDataNewFormatArray;
+
+  }
+
+  getBaseCrewListForDate(date: Date)
+  {
+    const dateAsString = date.getMonth() + '-' + date.getDay();
+  }
+
 }

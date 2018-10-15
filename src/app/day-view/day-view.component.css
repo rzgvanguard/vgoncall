@@ -1,0 +1,26 @@
+#myInputFirstName {
+    background-position: 10px 12px; /* Position the search icon */
+    width: 100%; /* Full-width */
+    font-size: 12px; /* Increase font-size */
+    padding: 3px 5px 3px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myInputLastName {
+    background-position: 10px 12px; /* Position the search icon */
+    width: 100%; /* Full-width */
+    font-size: 12px; /* Increase font-size */
+    padding: 3px 5px 3px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myInputProductName {
+    background-position: 10px 12px; /* Position the search icon */
+    width: 100%; /* Full-width */
+    font-size: 12px; /* Increase font-size */
+    padding: 3px 5px 3px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}

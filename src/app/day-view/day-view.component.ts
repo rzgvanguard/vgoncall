@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CrewListData } from '../entities/CrewListData';
+import { CrewApiService } from '../services/crew-api.service';
+import { BaseCrewNewFormat } from '../entities/BaseCrewNewFormat';
+import { CrewDataNewFormat } from '../entities/CrewDataNewFormat';
 
 
 @Component({
@@ -10,15 +14,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DayViewComponent implements OnInit {
   private onCallDate: Date;
   private onCallDateAsString: string;
-
+  private crewMembers: CrewDataNewFormat[];
+  private filteredCrewMembers: CrewDataNewFormat[];
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private apiService: CrewApiService
   ) { }
 
   ngOnInit() {
 
     this.getDateAndDateString();
+    this.getCrewOnCall();
   // const sub = this.route
     //   .queryParams
     //   .subscribe(params => {
@@ -50,6 +57,18 @@ export class DayViewComponent implements OnInit {
   this.onCallDateAsString = dayOfWeek + ', ' + month + ' ' + day + suffix + ', '
 + ' ' + year;
   console.log('date is: ' + this.onCallDate);
+  }
+
+  getCrewOnCall() {
+    this.crewMembers = this.apiService.testBaseCrewList();
+  }
+
+  applyFilters() {
+    const fName = document.getElementById('myInputFirstName').textContent;
+    const lName = document.getElementById('myInputLastName');
+    const productName = document.getElementById('myInputProductName');
+    console.log('filters observed : ' + fName  + ' ' + lName + ' ' + productName);
+    // this.filteredCrewMembers = this.crewMembers.filter(c => c.CrewPM.Manager.FirstName === fName);
   }
 
 }
