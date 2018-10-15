@@ -2,3 +2,31 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.center
+
+em {
+    float: right;
+    color: #E05C65;
+    padding-left: 10px;
+}
+
+.error input {
+    background-color: #E05C65;
+}
+
+.error ::-webkit-input-placeholder {
+    background-color: #E05C65;
+}
+
+.error ::-moz-placeholder {
+    background-color: #E05C65;
+}
+
+.error :-moz-placeholder {
+    background-color: #E05C65;
+}
+
+.error :-ms-input-placeholder {
+    background-color: #E05C65;
+}

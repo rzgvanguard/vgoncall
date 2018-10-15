@@ -19,7 +19,7 @@ export class DayViewComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private apiService: CrewApiService
+    private crewService: CrewApiService
   ) { }
 
   ngOnInit() {
@@ -32,6 +32,8 @@ export class DayViewComponent implements OnInit {
     //     // Defaults to 0 if no query param provided.
     //     this.theDate = +params['page'] || 0;
     //   });
+    // this.crewService.getCrewOnCallForDate(this.onCallDate);
+    this.crewService.getAllCrew();
   }
 
   getDateAndDateString() {
@@ -53,14 +55,14 @@ export class DayViewComponent implements OnInit {
   } else if (day % 10 === 3) {
     suffix = 'rd';
   }
-  console.log(dayOfWeek);
+  // console.log(dayOfWeek);
   this.onCallDateAsString = dayOfWeek + ', ' + month + ' ' + day + suffix + ', '
-+ ' ' + year;
-  console.log('date is: ' + this.onCallDate);
+    + ' ' + year;
+  // console.log('date is: ' + this.onCallDate);
   }
 
   getCrewOnCall() {
-    this.crewMembers = this.apiService.testBaseCrewList();
+    this.crewMembers = this.crewService.testBaseCrewList();
   }
 
   applyFilters() {

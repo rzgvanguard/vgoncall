@@ -16,12 +16,14 @@ export class MonthlyCalendarComponent implements OnInit {
   viewDate: Date = new Date();
   selectedMonth: Number = this.viewDate.getMonth() + 1;
   monthName: String;
+  dateYear: number;
   dateHelper: DateHelper = new DateHelper();
   myView: String = 'month';
   clickedDate: Date;
   events = [];
   constructor(private apiService: CrewApiService, private router: Router) {
   this.monthName  = this.dateHelper.convertMonthToString(this.selectedMonth);
+  this.dateYear = this.viewDate.getFullYear();
   }
 
   ngOnInit() {
@@ -39,12 +41,13 @@ export class MonthlyCalendarComponent implements OnInit {
     const dateString = date.getMonth() + '-' + date.getDate() + '-' + date.getFullYear();
     this.router.navigate(['/DayView'], { queryParams: { date: date } });
 
-    console.log(date);
+    // console.log(date);
   }
 
   updateDate() {
     this.selectedMonth = this.viewDate.getMonth() + 1;
     this.monthName = this.dateHelper.convertMonthToString(this.selectedMonth);
+    this.dateYear = this.viewDate.getFullYear();
   }
 
   getOnCallEmployees(): Array<CrewListData> {
