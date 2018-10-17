@@ -50,14 +50,12 @@ export class CrewChangeRequestComponent implements OnInit {
     let retList = new Array<CrewListData>();
     let combinedList = new Array<CrewListData>();
     combinedList = combinedList.concat(fnList, lnList, cIdList);
-    console.log(combinedList);
 
     for(let i = 0; i < combinedList.length; i++) {
       if(!this.searchIfCrewIdExists(combinedList[i].CrewId, retList)) {
         retList.push(combinedList[i]);
       }
     }
-    console.log(retList);
     return retList;
   }
 

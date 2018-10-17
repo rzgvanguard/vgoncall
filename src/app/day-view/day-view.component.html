@@ -46,12 +46,17 @@
 
 
 
-  <div class="row">
+  <!-- <div class="row">
     <app-crew-display (buttonClick) = "redirectToCrewProfile($event)" 
       *ngFor="let crew of crewMembers" [crew]="crew">
     </app-crew-display>
+  </div> -->
+  <br>
+  <br>
+  <div *ngFor="let crew of crewDataList" class="row">
+    {{ crew.FirstName }}
+    {{ crew.LastName }}
   </div>
-  
 
 </div>
 

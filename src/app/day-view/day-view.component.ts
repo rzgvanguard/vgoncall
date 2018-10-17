@@ -4,6 +4,7 @@ import { CrewListData } from '../entities/CrewListData';
 import { CrewApiService } from '../services/crew-api.service';
 import { BaseCrewNewFormat } from '../entities/BaseCrewNewFormat';
 import { CrewDataNewFormat } from '../entities/CrewDataNewFormat';
+import { CrewData } from '../entities/CrewData';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { CrewDataNewFormat } from '../entities/CrewDataNewFormat';
 export class DayViewComponent implements OnInit {
   private onCallDate: Date;
   private onCallDateAsString: string;
+  private crewDataList: CrewData[];
   private crewMembers: CrewDataNewFormat[];
   private filteredCrewMembers: CrewDataNewFormat[];
   constructor(
@@ -33,7 +35,17 @@ export class DayViewComponent implements OnInit {
     //     this.theDate = +params['page'] || 0;
     //   });
     // this.crewService.getCrewOnCallForDate(this.onCallDate);
-    this.crewService.getAllCrew();
+    // this.crewService.getAllCrew();
+    this.getCrew();
+  }
+
+  getCrew() {
+    this.crewDataList = new Array<CrewData>();
+    this.crewService.getAllCrew().subscribe(
+      (data: CrewData[]) => this.crewDataList = data, 
+      (err: any) => console.log('Error encountered: ' + err)
+    );
+    console.log('inside the component: ' + this.crewDataList);
   }
 
   getDateAndDateString() {
@@ -62,7 +74,7 @@ export class DayViewComponent implements OnInit {
   }
 
   getCrewOnCall() {
-    this.crewMembers = this.crewService.testBaseCrewList();
+    // this.crewMembers = this.crewService.testBaseCrewList();
   }
 
   applyFilters() {

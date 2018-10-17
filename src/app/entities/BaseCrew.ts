@@ -1,4 +1,4 @@
-export class BaseCrew {
+export interface BaseCrew {
     CrewId: String;
     CrewEmail: String;
     CrewPhoneNumber: String;

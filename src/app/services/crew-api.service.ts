@@ -6,6 +6,8 @@ import { BaseCrewNewFormat} from '../entities/BaseCrewNewFormat';
 import { CrewDataNewFormat } from '../entities/CrewDataNewFormat';
 import { CrewData } from '../entities/CrewData';
 import { CrewTransferData } from '../entities/CrewTransferData';
+import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -150,15 +152,11 @@ export class CrewApiService {
     return null;
   }
 
-  getAllCrew(): Array<CrewData> {
+  getAllCrew(): Observable<Array<CrewData>> {
     const url = this.restUrl.concat('CrewData');
-    let crewData: any = null;
-    this.httpClient.get(url).subscribe((data: any) =>
-        crewData = data
-        // console.log(data)
-        );
-    console.log(crewData);
-      return null;
+    
+    return this.httpClient.get<CrewData[]>(url)
+      .pipe(map(r => r as CrewData[]));
   }
 
   testSingle(id: String): CrewListData {
