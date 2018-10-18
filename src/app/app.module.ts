@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// Mat Imports
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { AppComponent } from './app.component';
 import { CrewListComponent } from './crew-list/crew-list.component';
@@ -67,6 +70,7 @@ import { ManagerScreenComponent } from './manager-screen/manager-screen.componen
     MatInputModule,
     MatAutocompleteModule,
     MatSelectModule,
+    MatCardModule,
   ],
   providers: [
     CrewApiService, CrewRouteActivatorService,
