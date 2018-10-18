@@ -1,9 +1,9 @@
 <div>
-  <p>
-    This will be a sorted list of every crew memeber for each manager
-  </p>
+  <h2>
+    test
+  </h2>
   <div class="row">
-      <app-crew-display (buttonClick) = "redirectToCrewProfile($event)" 
+      <app-crew-display (buttonClick)="redirectToCrewProfile($event)" 
       *ngFor="let crew of crewMembers" [crew]="crew">
     </app-crew-display>
 </div>
