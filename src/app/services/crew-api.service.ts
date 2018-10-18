@@ -154,7 +154,7 @@ export class CrewApiService {
 
   getAllCrew(): Observable<Array<CrewData>> {
     const url = this.restUrl.concat('CrewData');
-    
+
     return this.httpClient.get<CrewData[]>(url)
       .pipe(map(r => r as CrewData[]));
   }
@@ -223,5 +223,9 @@ export class CrewApiService {
     return true;
 
     // if the call is rejected - return false
+  }
+
+  deleteCrew(id: String) {
+    // delete the crew memeber
   }
 }

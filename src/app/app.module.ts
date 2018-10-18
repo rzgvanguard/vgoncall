@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { AppComponent } from './app.component';
@@ -36,8 +38,7 @@ import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.co
 import { DayViewComponent } from './day-view/day-view.component';
 import { ManagerScreenComponent } from './manager-screen/manager-screen.component';
 import { PendingChangeRequestsComponent } from './pending-change-requests/pending-change-requests.component';
-import { DisplayChangeRequestComponent } from './services/display-change-request/display-change-request.component';
-import { DisplayChangeRequestListComponent } from './display-change-request-list/display-change-request-list.component';
+import { DisplayChangeRequestComponent } from './display-change-request/display-change-request.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,6 @@ import { DisplayChangeRequestListComponent } from './display-change-request-list
     ManagerScreenComponent,
     PendingChangeRequestsComponent,
     DisplayChangeRequestComponent,
-    DisplayChangeRequestListComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +77,8 @@ import { DisplayChangeRequestListComponent } from './display-change-request-list
     MatAutocompleteModule,
     MatSelectModule,
     MatCardModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [
     CrewApiService, CrewRouteActivatorService,

@@ -1,21 +1,5 @@
 <div class="well hoverwell thumbnail">
-    <mat-card>
-        <mat-card-header>
-            <!-- <div mat-card-avatar class="header-image">
-
-            </div> -->
-            <mat-card-title>
-                Crew Profile
-            </mat-card-title>
-            <mat-card-subtitle>
-                Subtitle
-            </mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            
-        </mat-card-content>
-    </mat-card>
-    <!-- <hr>
+    <hr>
     <h2>
         {{ crew.FirstName }} {{ crew.LastName }}
     </h2>
@@ -23,14 +7,10 @@
     <p>
         Manager Name: {{ crew.ManagerName }}
         <br>
-<<<<<<< HEAD
-        Phone Number: {{crew.PhoneNumber}}
-    </p> -->
-=======
         Phone Number: {{ crew.PhoneNumber }}
     </p>
->>>>>>> cb87ab5ed20c9903ed9e32e665c94eaf24e189dc
     <div [routerLink]="['/CrewList', crew.CrewId]">
-        <button class="btn btn-primary" (click)="viewCrewProfile()">View Profile</button>  
+        <button mat-stroked-button (click)="viewCrewProfile()">View Profile</button>  
     </div>
+    <hr>
   </div>

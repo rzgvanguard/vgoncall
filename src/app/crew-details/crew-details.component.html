@@ -1,6 +1,6 @@
 <div class="well hoverwell thumbnail">
   <h2>
-    {{crew.FirstName}} {{crew.LastName}}
+    {{crew?.FirstName}} {{crew?.LastName}}
   </h2>  
   <p>
     This will be a picture of the crew memeber
@@ -11,19 +11,19 @@
       <div class="col-md-4">
           <b> Manager Name:</b> 
           <br>
-          <a> {{crew.ManagerName}} </a>
+          <a> {{ crew?.ManagerName }} </a>
       </div>
     
       <div class="col-md-4">
-          Crew Cell Number: {{crew.PhoneNumber}}
+          Crew Cell Number: {{ crew?.PhoneNumber }}
           <br>
-          Crew On-Call Number: {{crew.PhoneNumber}}
+          Crew On-Call Number: {{ crew?.PhoneNumber }}
       </div>
 
       <div class="col-md-4">
-          On Call Start Date: {{crew.OnCallStartDate}}
+          On Call Start Date: {{ crew?.OnCallStartDate }}
           <br>
-          On Call End Date: {{crew.OnCallEndDate}}
+          On Call End Date: {{ crew?.OnCallEndDate }}
       </div>
   </div>
 
@@ -34,19 +34,19 @@
   </div>
   <div class="row pad-top">
     <div class="col-md-3">
-        <button class="btn btn-primary" (click)="viewCrewSchedule()">View Schedule</button>  
+        <button mat-stroked-button (click)="viewCrewSchedule()">View Schedule</button>  
     </div>
 
     <div class="col-md-3">
-        <button class="btn btn-primary">Change Requests</button>  
+        <button mat-stroked-button>Change Requests</button>  
     </div>
 
     <div class="col-md-3">
-        <button class="btn btn-primary">Edit Profile Info</button>  
+        <button mat-stroked-button>Edit Profile Info</button>  
     </div>
 
     <div class="col-md-3">
-        <button class="btn btn-danger">Remove Crew</button>  
+        <button mat-stroked-button color="warn">Remove Crew</button>  
     </div>
   </div>
 </div>

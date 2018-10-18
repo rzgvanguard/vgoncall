@@ -5,7 +5,7 @@
   <hr>
   <div class="row">
     <app-display-change-request (buttonClick) = "redirectToChangeRequest($event)"
-        *ngFor="let change in changeRequestList" [changeRequest] = "change">
+        *ngFor="let change of changeRequestList" [changeRequest]="change">
     </app-display-change-request>
   </div>
 </div>
