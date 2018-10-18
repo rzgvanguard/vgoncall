@@ -35,6 +35,9 @@ import { CommonModule } from '@angular/common';
 import { MonthlyCalendarComponent } from './monthly-calendar/monthly-calendar.component';
 import { DayViewComponent } from './day-view/day-view.component';
 import { ManagerScreenComponent } from './manager-screen/manager-screen.component';
+import { PendingChangeRequestsComponent } from './pending-change-requests/pending-change-requests.component';
+import { DisplayChangeRequestComponent } from './services/display-change-request/display-change-request.component';
+import { DisplayChangeRequestListComponent } from './display-change-request-list/display-change-request-list.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { ManagerScreenComponent } from './manager-screen/manager-screen.componen
     MonthlyCalendarComponent,
     DayViewComponent,
     ManagerScreenComponent,
+    PendingChangeRequestsComponent,
+    DisplayChangeRequestComponent,
+    DisplayChangeRequestListComponent,
   ],
   imports: [
     BrowserModule,

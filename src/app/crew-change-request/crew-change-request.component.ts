@@ -38,7 +38,7 @@ export class CrewChangeRequestComponent implements OnInit {
    }
 
   private _filterCrew(value: string): CrewListData[] {
-    console.log('value is ' + value);
+    // console.log('value is ' + value);
     const filterValue = value.toLowerCase();
 
     const firstNameList = this.crewMembers.filter(c => c.FirstName.toLowerCase().indexOf(filterValue) === 0);

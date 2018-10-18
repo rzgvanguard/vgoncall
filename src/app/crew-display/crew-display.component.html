@@ -17,14 +17,19 @@
     </mat-card>
     <!-- <hr>
     <h2>
-        {{crew.FirstName}} {{crew.LastName}}
+        {{ crew.FirstName }} {{ crew.LastName }}
     </h2>
     <h6>Relevant Information:</h6>
     <p>
-        Manager Name: {{crew.ManagerName}}
+        Manager Name: {{ crew.ManagerName }}
         <br>
+<<<<<<< HEAD
         Phone Number: {{crew.PhoneNumber}}
     </p> -->
+=======
+        Phone Number: {{ crew.PhoneNumber }}
+    </p>
+>>>>>>> cb87ab5ed20c9903ed9e32e665c94eaf24e189dc
     <div [routerLink]="['/CrewList', crew.CrewId]">
         <button class="btn btn-primary" (click)="viewCrewProfile()">View Profile</button>  
     </div>

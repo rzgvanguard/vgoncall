@@ -19,7 +19,7 @@ export class CrewDetailsComponent implements OnInit {
     // console.log(this.crew);
   }
 
-  viewCrewProfile() {
+  viewCrewSchedule() {
     console.log(this.route.snapshot.params['id']);
   }
 }
