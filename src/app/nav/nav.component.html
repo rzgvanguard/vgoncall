@@ -12,7 +12,7 @@
           <li><a [routerLink]="['AddCrew']">Add Crew</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-              Options
+              Calendar Options
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -24,9 +24,20 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a [routerLink]="['CrewChangeRequest']">Request Change</a>
-          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                Change Request Options
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              <li>
+                <a [routerLink]="['CrewChangeRequest']">Request Change</a>
+              </li>
+                <li>
+                    <a [routerLink]="['PendingRequests/']" >Pending Requests</a>
+                </li>
+              </ul>
+            </li>
         </ul>
         <div class="navbar-header navbar-right">
           <ul class="nav navbar-nav">
