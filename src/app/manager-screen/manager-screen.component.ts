@@ -12,7 +12,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ManagerScreenComponent implements OnInit {
 
-  private crewTeam: Array<CrewData>;
+  private crewMembers: Array<CrewData>;
   private manager: Manager;
   constructor(private crewService: CrewApiService, private productService: ProductService) { }
 
@@ -23,9 +23,11 @@ export class ManagerScreenComponent implements OnInit {
     this.manager.LastName = 'Cavallo';
     this.manager.ProductList = new Array<ProductData>();
     this.manager.ProductList = this.productService.getProductsByManagerId(this.manager.CrewId);
-    
 
-    this.crewTeam = this.crewService.getCrewByManager(this.manager.CrewId);
+    this.crewMembers = this.crewService.getCrewByManager(this.manager.CrewId);
   }
 
+  redirectToCrewProfile() {
+
+  }
 }

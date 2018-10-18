@@ -36,7 +36,7 @@ export class DayViewComponent implements OnInit {
     //   });
     // this.crewService.getCrewOnCallForDate(this.onCallDate);
     // this.crewService.getAllCrew();
-    this.getCrew();
+    this.getCrewTemp();
   }
 
   getCrew() {
@@ -45,7 +45,11 @@ export class DayViewComponent implements OnInit {
       (data: CrewData[]) => this.crewDataList = data, 
       (err: any) => console.log('Error encountered: ' + err)
     );
-    console.log('inside the component: ' + this.crewDataList);
+  }
+
+  getCrewTemp() {
+    this.crewDataList = new Array<CrewData>();
+    
   }
 
   getDateAndDateString() {

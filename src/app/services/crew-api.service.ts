@@ -21,20 +21,28 @@ export class CrewApiService {
     this.tempCrewData = new Array<CrewData>();
 
     const c1 = new CrewData();
-
+    
     c1.CrewId = '12345';
+    c1.FirstName = 'Yumi';
+    c1.LastName = 'Yu';
 
     const c2 = new CrewData();
     c2.CrewId = '23456';
+    c2.FirstName = 'Alex';
+    c2.LastName = 'Jones';
 
     const c3 = new CrewData();
     c3.CrewId = '34567';
+    c3.FirstName = 'Jack';
+    c3.LastName = 'Son';
 
     const c4 = new CrewData();
     c4.CrewId = '45678';
+    c4.FirstName = 'Lauren';
+    c4.LastName = 'Haggle';
 
     this.tempCrewData.push(c1, c2, c3, c4);
-
+    
     return this.tempCrewData;
   }
 
@@ -203,8 +211,6 @@ export class CrewApiService {
     c4.OnCallDays = c4ArrOnCallDays;
     c4.FirstName = 'Suzie';
     c4.CrewManager.FirstName = 'Sarv';
-
-
 
     crewDataNewFormatArray.push(c1, c2, c3, c4);
     return crewDataNewFormatArray;
