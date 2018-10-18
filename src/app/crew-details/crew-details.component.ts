@@ -17,7 +17,7 @@ export class CrewDetailsComponent implements OnInit {
               public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.crew = this.crewService.testSingle(this.route.snapshot.params['id']);
+    this.crew = this.crewService.getCrewById(this.route.snapshot.params['id']);
     // console.log(this.crew);
   }
 

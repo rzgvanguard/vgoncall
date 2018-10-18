@@ -11,7 +11,7 @@ export class CrewRouteActivatorService implements CanActivate {
 
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
-    const crewExists = !!this.crewService.testSingle(route.params['id']);
+    const crewExists = !!this.crewService.getCrewById(route.params['id']);
 
     if (!crewExists) {
       this.router.navigate(['/404']);

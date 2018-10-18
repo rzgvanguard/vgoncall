@@ -159,18 +159,16 @@ export class CrewApiService {
       .pipe(map(r => r as CrewData[]));
   }
 
-  testSingle(id: String): CrewListData {
+  getCrewById(id: String): CrewListData {
     // this needs to eventually return the correct data not stale / static data
     // console.log('api being called with: ' + id);
-    const c4 = new CrewListData();
+    let c4 = new CrewListData();
 
-    c4.FirstName = 'Lauren';
-    c4.LastName = 'Haggle';
-    c4.ManagerName = 'Michael Cavallo';
-    c4.PhoneNumber = '6096096060';
-    c4.OnCallEndDate = 'Jan 8 2018';
-    c4.OnCallStartDate = 'Jan 1 2018';
-    c4.CrewId = '45678';
+    let crewArray = new Array<CrewListData>();
+
+    crewArray = this.test();
+
+    c4 = crewArray.find(c => c.CrewId == id);
 
     return c4;
   }
@@ -210,7 +208,6 @@ export class CrewApiService {
 
     crewDataNewFormatArray.push(c1, c2, c3, c4);
     return crewDataNewFormatArray;
-
   }
 
   getBaseCrewListForDate(date: Date) {

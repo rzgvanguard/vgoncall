@@ -1,18 +1,28 @@
 <div>
   <h1>
-    On Call Calendar
+    On Call Weekly Calendar
   </h1>
 
-  <div class="alert alert-info">
+  <!-- <div class="alert alert-info">
       Click on a day on the view.
       <strong *ngIf="clickedDate">You clicked on this day: {{ clickedDate | date:'medium' }}</strong>
-    </div>
+    </div> -->
 
-  <div>
+  <div class="changeColor">
       <mwl-calendar-week-view
         [viewDate]="viewDate"
         [events]="events"
         (dayHeaderClicked)="clickedDate = $event.day.date">
       </mwl-calendar-week-view>
-    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <p>
+      Current MOM: Mike Cavallo
+    </p>
+    <hr>
+    <p>
+      Crew On call this week
+    </p>
+  </div>
 </div>
