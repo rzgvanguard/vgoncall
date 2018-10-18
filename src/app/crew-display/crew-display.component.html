@@ -10,6 +10,7 @@
         Phone Number: {{ crew.PhoneNumber }}
     </p>
     <div [routerLink]="['/CrewList', crew.CrewId]">
-        <button class="btn btn-primary" (click)="viewCrewProfile()">View Profile</button>  
+        <button mat-stroked-button (click)="viewCrewProfile()">View Profile</button>  
     </div>
+    <hr>
   </div>

@@ -10,7 +10,9 @@ import { ChangeRequest } from '../entities/ChangeRequest';
 export class PendingChangeRequestsComponent implements OnInit {
 
   private changeRequestList: ChangeRequest[];
-  constructor(private changeService: ChangeRequestService) { }
+  constructor(private changeService: ChangeRequestService) {
+    this.changeRequestList = new Array<ChangeRequest>();
+   }
 
   ngOnInit() {
     this.changeRequestList = this.changeService.getAllChangeRequests();

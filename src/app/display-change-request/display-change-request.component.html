@@ -1,18 +1,27 @@
 <div class="container">
-  <h3>
-    Change Request:
-  </h3>
-  <div>
-      <p>
-        <br>
-            {{ changeRequest.CrewId }}
-        <br>
-            {{ changeRequest.StartDate }}
-        <br>
-            {{ changeRequest.EndDate }}
-        <br>
-            {{ changeRequest.SwapReason }}
-        <br>
-      </p>
+  <div class="pad-bottom">
+      <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+                Crew Member: {{ changeRequest?.CrewFirstName }} {{ changeRequest?.CrewLastName }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                Crew Id: {{ changeRequest?.CrewId}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <br>
+                <b>Start Date:</b> {{ changeRequest?.StartDate }}
+            <br>
+                <b>End Date:</b> {{ changeRequest?.EndDate }}
+            <br>
+                <b>Reason:</b> {{ changeRequest?.SwapReason }}
+            <br>
+          </mat-card-content>
+          <mat-card-actions>
+              <button mat-stroked-button (click)="take(changeRequest?.ChangeRequestId)" color="primary">Take</button>
+              <button mat-stroked-button (click)="delete(changeRequest?.ChangeRequestId)" color="warn">Delete</button>
+          </mat-card-actions>
+      </mat-card>
   </div>
 </div>

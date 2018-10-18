@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChangeRequest } from '../entities/ChangeRequest';
+import { ChangeRequestService } from '../services/change-request.service';
 
 @Component({
   selector: 'app-display-change-request',
@@ -11,18 +12,23 @@ export class DisplayChangeRequestComponent implements OnInit {
   @Input() changeRequest: ChangeRequest;
   @Output() buttonClick = new EventEmitter();
 
-  constructor() { }
+  constructor(private changeService: ChangeRequestService) { }
 
   ngOnInit() {
-    this.changeRequest = new ChangeRequest();
-    this.changeRequest.CrewId = "12345";
-    this.changeRequest.StartDate = new Date(2018, 10, 17);
-    this.changeRequest.EndDate = new Date(2018, 10, 24);
-    this.changeRequest.SwapReason = "I have a preexisting commitment";
+
   }
 
   viewChangeRequest() {
     this.buttonClick.emit(this.changeRequest.ChangeRequestId);
     // console.log('crew id ' + this.route.snapshot.params['id']);
+  }
+
+  take(id: String) {
+    // use the given id of the change request to delete it
+    // pull the current user info from a cookie to then unassign the dates from the requester and assign them to the accepter
+  }
+
+  delete(id: String) {
+    this.changeService.deleteChangeRequest(id);
   }
 }

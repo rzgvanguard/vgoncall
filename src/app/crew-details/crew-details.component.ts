@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { CrewApiService } from '../services/crew-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { CrewListData } from '../entities/CrewListData';
@@ -12,7 +13,8 @@ export class CrewDetailsComponent implements OnInit {
 
   crew: CrewListData;
 
-  constructor(private crewService: CrewApiService, private route: ActivatedRoute) { }
+  constructor(private crewService: CrewApiService, private route: ActivatedRoute,
+              public dialog: MatDialog) { }
 
   ngOnInit() {
     this.crew = this.crewService.testSingle(this.route.snapshot.params['id']);
@@ -21,5 +23,13 @@ export class CrewDetailsComponent implements OnInit {
 
   viewCrewSchedule() {
     console.log(this.route.snapshot.params['id']);
+  }
+
+  deleteCrew(id: String) {
+
+  }
+
+  confirmDeleteCrew(id: String) {
+    this.crewService.deleteCrew(id);
   }
 }
