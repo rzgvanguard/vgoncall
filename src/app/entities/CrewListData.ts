@@ -4,7 +4,7 @@ export class CrewListData {
     LastName: String;
     PhoneNumber: String;
     ManagerName: String;
-    DaysOnCallList: Number[];
+    DaysOnCallList: Array<Number>;
     OnCallStartDate: String;
     OnCallEndDate: String;
     ImageUrl: String;

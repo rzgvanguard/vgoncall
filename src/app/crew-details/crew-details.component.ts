@@ -12,17 +12,19 @@ import { CrewListData } from '../entities/CrewListData';
 export class CrewDetailsComponent implements OnInit {
 
   crew: CrewListData;
-
+  displayCrewSchedule: boolean;
   constructor(private crewService: CrewApiService, private route: ActivatedRoute,
               public dialog: MatDialog) { }
 
   ngOnInit() {
+
     this.crew = this.crewService.getCrewById(this.route.snapshot.params['id']);
     // console.log(this.crew);
   }
 
   viewCrewSchedule() {
-    console.log(this.route.snapshot.params['id']);
+    // console.log(this.route.snapshot.params['id']);
+    this.displayCrewSchedule = true;
   }
 
   deleteCrew(id: String) {

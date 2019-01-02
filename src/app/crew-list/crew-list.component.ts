@@ -34,7 +34,7 @@ export class CrewListComponent implements OnInit {
     // // console.log(crewData);
   }
 
-  redirectToCrewProfile(data) {
+  redirectToCrewProfile(data: any) {
     // console.log(data);
   }
 

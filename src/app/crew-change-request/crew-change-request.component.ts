@@ -90,7 +90,6 @@ export class CrewChangeRequestComponent implements OnInit {
   // this is called through the mat option on selection change - this gives me access to the selected crew entire object
   getSelectedCrew(data: CrewListData) {
     this.selectedCrew = data;
-    // console.log(data);
   }
 
   onSubmit() {

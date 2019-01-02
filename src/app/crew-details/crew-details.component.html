@@ -50,3 +50,12 @@
     </div>
   </div>
 </div>
+
+<div *ngIf="displayCrewSchedule">
+    <p>
+        On Call days:
+    </p>
+    <p>
+        {{ crew?.DaysOnCallList}}
+    </p>
+</div>

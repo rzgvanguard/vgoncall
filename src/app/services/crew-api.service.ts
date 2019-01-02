@@ -177,7 +177,10 @@ export class CrewApiService {
     crewArray = this.test();
 
     c4 = crewArray.find(c => c.CrewId == id);
+    let data = new Array<Number>();
+    data.push(1, 2, 3, 4, 5, 6, 7);
 
+    c4.DaysOnCallList = data;
     return c4;
   }
 
