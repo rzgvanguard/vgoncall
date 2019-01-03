@@ -9,5 +9,5 @@ export class CrewData implements BaseCrew {
     CrewExtension: String;
     FirstName: String;
     LastName: String;
-    OnCallDays: Array<Number>;
+    OnCallDays: Array<number>;
 }

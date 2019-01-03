@@ -21,25 +21,28 @@ export class CrewApiService {
     this.tempCrewData = new Array<CrewData>();
 
     const c1 = new CrewData();
-    
     c1.CrewId = '12345';
     c1.FirstName = 'Yumi';
     c1.LastName = 'Yu';
+    c1.CrewPhoneNumber = '6106382700';
 
     const c2 = new CrewData();
     c2.CrewId = '23456';
     c2.FirstName = 'Alex';
     c2.LastName = 'Jones';
+    c2.CrewPhoneNumber = '6101990395'
 
     const c3 = new CrewData();
     c3.CrewId = '34567';
     c3.FirstName = 'Jack';
     c3.LastName = 'Son';
+    c3.CrewPhoneNumber = '6109068405'
 
     const c4 = new CrewData();
     c4.CrewId = '45678';
     c4.FirstName = 'Lauren';
     c4.LastName = 'Haggle';
+    c4.CrewPhoneNumber = '6108563049';
 
     this.tempCrewData.push(c1, c2, c3, c4);
     

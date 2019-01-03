@@ -21,7 +21,7 @@
   <h4>
     Crew under {{ manager?.LastName }}:
   </h4>
-  
+
   <div class="row">
     <app-crew-display (buttonClick)="redirectToCrewProfile($event)" *ngFor="let crew of crewMembers" [crew]="crew">
     </app-crew-display>
@@ -30,15 +30,18 @@
   <div>
     <app-product-display></app-product-display>
   </div>
-  <p>
-    Features to come:
-    Swap times with other managers during MOM timeframe.
-    <br>
-    Swapping and assigning individual crew specific days / weeks
-    <br>
-    Batch assignment for the year - algorithm has been completed, I just need to implement it on the service
-    <br>
-    Filtering on page.
-    <br>
-  </p>
+  <div>
+    <p>
+      Features to come:
+      Swap times with other managers during MOM timeframe.
+      <br>
+      Swapping and assigning individual crew specific days / weeks
+      <br>
+      Batch assignment for the year - algorithm has been completed, I just need to implement it on the service
+      <br>
+      Filtering on page.
+      <br>
+    </p>
+  </div>
+
 </div>
