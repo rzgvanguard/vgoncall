@@ -39,6 +39,7 @@ import { DayViewComponent } from './day-view/day-view.component';
 import { ManagerScreenComponent } from './manager-screen/manager-screen.component';
 import { PendingChangeRequestsComponent } from './pending-change-requests/pending-change-requests.component';
 import { DisplayChangeRequestComponent } from './display-change-request/display-change-request.component';
+import { ProductDisplayComponent } from './product-display/product-display.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { DisplayChangeRequestComponent } from './display-change-request/display-
     ManagerScreenComponent,
     PendingChangeRequestsComponent,
     DisplayChangeRequestComponent,
+    ProductDisplayComponent,
   ],
   imports: [
     BrowserModule,

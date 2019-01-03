@@ -11,7 +11,7 @@
       <div class="col-md-4">
           <b> Manager Name:</b> 
           <br>
-          <a> {{ crew?.ManagerName }} </a>
+          <a href="ManagerConsole"> {{ crew?.ManagerName }} </a>
       </div>
     
       <div class="col-md-4">
@@ -55,7 +55,7 @@
     <p>
         On Call days:
     </p>
-    <p>
-        {{ crew?.DaysOnCallList}}
+    <p *ngFor="let date of crew.DaysOnCallDates">
+        {{ date.toLocaleString('en-US') }}
     </p>
 </div>

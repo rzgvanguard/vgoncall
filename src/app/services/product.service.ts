@@ -11,15 +11,15 @@ export class ProductService {
 
   getProductsByManagerId(id: String): ProductData[] {
     let p1 = new ProductData();
-    p1.ProductName = 'Balances and Holdings';
-    p1.ProductAbrv = 'b&h';
+    p1.ProductName = 'Agent Permissions';
+    p1.ProductAbrv = 'ap';
     p1.ProductOwner = 'Theresa Young';
     p1.TechnicalOwner = 'Mike Cavallo'
     p1.TechnicalOwnerId = id;
     
     let p2 = new ProductData();
-    p2.ProductName = 'Secure Overview';
-    p2.ProductAbrv = 'aov';
+    p2.ProductName = 'Notification of Death';
+    p2.ProductAbrv = 'NOD';
     p2.ProductOwner = 'Theresa Young';
     p2.TechnicalOwner = 'Mike Cavallo'
     p2.TechnicalOwnerId = id;

@@ -2,10 +2,33 @@
   <h2>
     Manager Console:
   </h2>
+  <h3>
+    Hello {{ manager?.FirstName }} {{ manager?.LastName}}
+  </h3>
+  <div>
+    <h4>
+      Crew Id: {{ manager?.CrewId}}
+    </h4>
+    <h4>
+      Phone Number: {{ manager?.CrewPhoneNumber }}
+    </h4>
+    <h4>
+      Currently MOM: Yes
+    </h4>
+  </div>
+
+  <hr>
+  <h4>
+    Crew under {{ manager?.LastName }}:
+  </h4>
+  
   <div class="row">
-      <app-crew-display (buttonClick)="redirectToCrewProfile($event)" 
-      *ngFor="let crew of crewMembers" [crew]="crew">
+    <app-crew-display (buttonClick)="redirectToCrewProfile($event)" *ngFor="let crew of crewMembers" [crew]="crew">
     </app-crew-display>
+  </div>
+
+  <div>
+    <app-product-display></app-product-display>
   </div>
   <p>
     Features to come:
@@ -13,10 +36,9 @@
     <br>
     Swapping and assigning individual crew specific days / weeks
     <br>
-    Batch assignment for the year
+    Batch assignment for the year - algorithm has been completed, I just need to implement it on the service
     <br>
     Filtering on page.
     <br>
-    Graph / tree structure - actively being developed
   </p>
 </div>

@@ -1,0 +1,18 @@
+<div>
+  <h1>
+    Products owned:
+  </h1>
+  <div>
+    <ul style="list-style-type: none;" *ngFor="let product of productList">
+      <li>
+        <b>Product:</b> {{ product?.ProductName}}
+      </li>
+      <li>
+        <b>Product Owner:</b> {{ product?.ProductOwner}}
+      </li>
+      <li>
+        <b>Technical Owner:</b> {{ product?.TechnicalOwner}}
+      </li>
+    </ul>
+  </div>
+</div>

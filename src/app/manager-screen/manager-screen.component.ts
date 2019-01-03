@@ -21,7 +21,9 @@ export class ManagerScreenComponent implements OnInit {
     this.manager.CrewId = '294023';
     this.manager.FirstName = 'Mike';
     this.manager.LastName = 'Cavallo';
+    this.manager.CrewPhoneNumber = '6106677463'
     this.manager.ProductList = new Array<ProductData>();
+
     this.manager.ProductList = this.productService.getProductsByManagerId(this.manager.CrewId);
 
     this.crewMembers = this.crewService.getCrewByManager(this.manager.CrewId);

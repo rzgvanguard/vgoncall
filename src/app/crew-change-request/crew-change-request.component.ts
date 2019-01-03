@@ -93,6 +93,7 @@ export class CrewChangeRequestComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.crewControl.value);
     console.log(this.crewControl);
   }
 }
