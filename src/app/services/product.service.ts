@@ -39,21 +39,29 @@ export class ProductService {
     p4.TechnicalOwnerId = id;
 
     let p5 = new ProductData();
-    p5.ProductName = 'CRMCE';
-    p5.ProductAbrv = 'crm';
-    p5.ProductOwner = 'John Snow';
+    p5.ProductName = 'WAVE Chrome';
+    p5.ProductAbrv = 'Wvc';
+    p5.ProductOwner = 'Tiffani Haddid';
     p5.TechnicalOwner = 'Amie Brucker'
     p5.TechnicalOwnerId = id;
 
     let p6 = new ProductData();
-    p6.ProductName = 'batch';
-    p6.ProductAbrv = 'bt';
-    p6.ProductOwner = 'John Snow';
+    p6.ProductName = 'Aspect';
+    p6.ProductAbrv = 'Asp';
+    p6.ProductOwner = 'Jayme Marino';
     p6.TechnicalOwner = 'Amie Brucker'
     p6.TechnicalOwnerId = id;
+
+    let p7 = new ProductData();
+    p7.ProductName = 'Funds';
+    p7.ProductAbrv = 'Fd';
+    p7.ProductOwner = 'Tiffani Haddad';
+    p7.TechnicalOwner = 'Amie Brucker'
+    p7.TechnicalOwnerId = id;
+
     let data = new Array<ProductData>();
 
-    data.push(p1, p2, p3, p4, p5, p6);
+    data.push(p1, p2, p3, p4, p5, p6, p7);
 
     return data;
   }

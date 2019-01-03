@@ -1,61 +1,63 @@
 <div class="well hoverwell thumbnail">
-  <h2>
-    {{crew?.FirstName}} {{crew?.LastName}}
-  </h2>  
-  <p>
-    This will be a picture of the crew memeber
-  </p>
-  <hr>
-
-  <div class="row">
-      <div class="col-md-4">
-          <b> Manager Name:</b> 
-          <br>
-          <a href="ManagerConsole"> {{ crew?.ManagerName }} </a>
-      </div>
-    
-      <div class="col-md-4">
-          Crew Cell Number: {{ crew?.PhoneNumber }}
-          <br>
-          Crew On-Call Number: {{ crew?.PhoneNumber }}
-      </div>
-
-      <div class="col-md-4">
-          On Call Start Date: {{ crew?.OnCallStartDate }}
-          <br>
-          On Call End Date: {{ crew?.OnCallEndDate }}
-      </div>
-  </div>
-
-  <div class="row pad-top">
-    <p> 
-      this will contain any other relevant information about the crew member
+    <h2>
+        {{crew?.FirstName}} {{crew?.LastName}}
+    </h2>
+    <p>
+        This will be a picture of the crew memeber
     </p>
-  </div>
-  <div class="row pad-top">
-    <div class="col-md-3">
-        <button mat-stroked-button (click)="viewCrewSchedule()">View Schedule</button>  
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <b> Manager Name:</b>
+            <br>
+            <a href="ManagerConsole"> {{ crew?.ManagerName }} </a>
+        </div>
+
+        <div class="col-md-4">
+            Crew Cell Number: {{ crew?.PhoneNumber }}
+            <br>
+            Crew On-Call Number: {{ crew?.PhoneNumber }}
+        </div>
+
+        <div class="col-md-4">
+            On Call Start Date: {{ crew?.OnCallStartDate }}
+            <br>
+            On Call End Date: {{ crew?.OnCallEndDate }}
+        </div>
     </div>
 
-    <div class="col-md-3">
-        <button mat-stroked-button>Change Requests</button>  
+    <div class="row pad-top">
+        <p>
+            this will contain any other relevant information about the crew member
+        </p>
     </div>
+    <div class="row pad-top">
+        <div class="col-md-3">
+            <button mat-stroked-button (click)="viewCrewSchedule()">View Schedule</button>
+        </div>
 
-    <div class="col-md-3">
-        <button mat-stroked-button>Edit Profile Info</button>  
-    </div>
+        <div class="col-md-3">
+            <button mat-stroked-button>Change Requests</button>
+        </div>
 
-    <div class="col-md-3">
-        <button mat-stroked-button color="warn">Remove Crew</button>  
+        <div class="col-md-3">
+            <button mat-stroked-button>Edit Profile Info</button>
+        </div>
+
+        <div class="col-md-3">
+            <button mat-stroked-button color="warn">Remove Crew</button>
+        </div>
     </div>
-  </div>
 </div>
 
 <div *ngIf="displayCrewSchedule">
     <p>
         On Call days:
     </p>
-    <p *ngFor="let date of crew.DaysOnCallDates">
-        {{ date.toLocaleString('en-US') }}
-    </p>
+    <div *ngFor="let date of crew.DaysOnCallDates">
+        <p>
+            {{ date.toLocaleString('en-US') }}
+        </p>
+    </div>
 </div>

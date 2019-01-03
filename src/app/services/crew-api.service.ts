@@ -25,24 +25,28 @@ export class CrewApiService {
     c1.FirstName = 'Yumi';
     c1.LastName = 'Yu';
     c1.CrewPhoneNumber = '6106382700';
+    c1.CrewImageUrl = 'https://blogs.brighthorizons.com/saw/wp-content/uploads/2017/03/2017-03-08-iStock-487804730.jpg';
 
     const c2 = new CrewData();
     c2.CrewId = '23456';
-    c2.FirstName = 'Alex';
-    c2.LastName = 'Jones';
-    c2.CrewPhoneNumber = '6101990395'
+    c2.FirstName = 'Lee';
+    c2.LastName = 'Bunnell';
+    c2.CrewPhoneNumber = '6101990395';
+    c2.CrewImageUrl = 'https://www.kiplinger.com/kipimages/pages/2227.jpg';
 
     const c3 = new CrewData();
     c3.CrewId = '34567';
     c3.FirstName = 'Jack';
     c3.LastName = 'Son';
-    c3.CrewPhoneNumber = '6109068405'
+    c3.CrewPhoneNumber = '6109068405';
+    c3.CrewImageUrl = 'https://media.istockphoto.com/photos/smiling-business-man-picture-id136159540';
 
     const c4 = new CrewData();
     c4.CrewId = '45678';
     c4.FirstName = 'Lauren';
     c4.LastName = 'Haggle';
     c4.CrewPhoneNumber = '6108563049';
+    c4.CrewImageUrl = 'https://st2.depositphotos.com/2673929/12060/i/950/depositphotos_120602968-stock-photo-happy-office-employee-portrait-in.jpg';
 
     this.tempCrewData.push(c1, c2, c3, c4);
     

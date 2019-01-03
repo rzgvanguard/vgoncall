@@ -10,4 +10,5 @@ export class CrewData implements BaseCrew {
     FirstName: String;
     LastName: String;
     OnCallDays: Array<number>;
+    CrewImageUrl: String;
 }

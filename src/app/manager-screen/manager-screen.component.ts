@@ -27,9 +27,6 @@ export class ManagerScreenComponent implements OnInit {
     this.manager.ProductList = this.productService.getProductsByManagerId(this.manager.CrewId);
 
     this.crewMembers = this.crewService.getCrewByManager(this.manager.CrewId);
-    this.crewMembers.forEach(c => {
-      console.log(c.CrewPhoneNumber);
-    });
   }
 
   redirectToCrewProfile() {
